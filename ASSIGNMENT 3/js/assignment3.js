@@ -1,23 +1,16 @@
-console.clear()
-
-let array1 = [100,-8,0,25,30];
-let array2 = [5,45,-2,-85,9];
-
-console.log("Max number for array 1 : " + Math.max.apply(null, array1));
-
-console.log("Max number for array 2  : " + Math.max.apply(null, array2));
-
-
-console.log("Min number for array 1 : " + Math.min.apply(null, array1));
-
-console.log("Min number for array 2  : " + Math.min.apply(null, array2));
-
-
-const avg = arr => {
-  const sum = arr.reduce((acc, cur) => acc + cur);
-  const average = sum/arr.length;
-  return average;
+function maxMinAvg(arr) {
+  arr = [50, 60, 20, 10, 40]
+  var max = arr[0];
+  var min = arr[0];
+  var sum = arr[0]; //changed from original post
+  for (var i = 1; i < arr.length; i++) {
+      if (arr[i] > max) {
+          max = arr[i];
+      }
+      if (arr[i] < min) {
+          min = arr[i];
+      }
+      sum = sum + arr[i];
+  }
+  return [max, min, sum/arr.length]; //changed from original post
 }
-
-console.log("Average number for array 1 : " + avg(array1));
-console.log("Average number for array 2 : " + avg(array2));
