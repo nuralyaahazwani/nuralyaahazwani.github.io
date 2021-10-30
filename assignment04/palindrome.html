@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+<body style="text-align: center;font-family: 'sans-serif' ;font-size: large;color: rgb(139, 0, 69);">
+    <h1>Welcome to the Palindrome!</h1>
+    <label for="string">Please Enter the Word </label>
+    <br></br>
+    <input type="text" id="string">
+    <br></br>
+    <button onclick="checkPalindrome1()">Palindrome</button>
+    <p id = "res"></p>
+    
+<script>
+    function checkPalindrome(str){
+        const len = string.length
+        for (let i= 0;i<len/2;i++){
+            if(string[i]!==string[len - 1 -i]){
+                alert("It is not a palindrome")
+            }
+        }
+         alert("It is a palindrome")
+    }
+
+    function checkPalindrome1()
+    {
+        var str = document.getElementById("string").value;
+        var p = checkPalindrome(str);
+    }
+</script>
+    
+</body>
+</html>

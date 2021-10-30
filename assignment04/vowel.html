@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Vowel</title>
+</head>
+<body style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: large;color: darkslategray;">
+    <h1>Welcome to the Count Vowel!</h1>
+    <label for="string">Enter the word or sentence!</label>
+    <br></br>
+    <input type="text" id="string">
+    <br></br>
+    <button onclick="countVowelNew()">Check Vowel!</button>
+    <p id = "res"></p>
+    
+<script>
+    function countVowel(str){
+
+        const vowels = ["a","e","i","o","u"]
+        let count = 0
+
+        for (let letter of str.toLowerCase()){
+            if(vowels.includes(letter)){
+                count++
+            }
+        }
+         alert("Number of vowels found are " + count)
+    }
+
+    function countVowelNew()
+    {
+        var str = document.getElementById("string").value
+        var v = countVowel(str)
+    }
+</script>
+      
+</body>
+</html>
