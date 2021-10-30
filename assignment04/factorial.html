@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Numbers</title>
+</head>
+<body style="text-align: center;font-family: 'Gill Sans Extrabold', cursive, sans-serif;font-size: large;color: rgb(63, 139, 0);">
+    <h1>Welcome to the Factorial Number!</h1>
+    <label for="anynumber">Please Enter Any Number</label>
+    <br></br>
+    <input type="number" id="numbers">
+    <br></br>
+    <button onclick="fact1()">Factorial</button>
+    <p id = "res"></p>
+
+<script>
+function fact(num) 
+{
+if (num == 0) {
+return 1;
+}
+else {
+return num * fact( num - 1 );
+}
+}
+function fact1()
+{
+var num = document.getElementById("numbers").value;
+var f = fact(num);
+document.getElementById("res").innerHTML="The factorial of the number " + num + " is: " + f ;
+}
+</script>
+</body>
+</html>
